@@ -14,16 +14,19 @@ int main() {
     scanf("%d", &chute); // lendo o chute do usuário, '&' indica o endereço da memória onde o valor será armazenado
     printf("\nSeu chute foi %d\n", chute);
 
+
+    int acertou = (chute == numerosecreto); // declarando a variavel e atribuindo o valor booleano (1 ou 0)
+    
     // Definindo a lógica do jogo
-    // se o chute for igual ao número secreto
-    if (chute == numerosecreto) {
+    // utilizando a variavel 'acertou' para verificar se o chute é igual ao número secreto
+    if (acertou) {
         printf("\nParabens! Voce acertou!\n");
         printf("Jogue de novo, voce e um bom jogador!");
     } else { // se o chute for diferente do número secreto
-        if (chute > numerosecreto) {
+        int maior = (chute > numerosecreto);
+        if (maior) {
             printf("Seu chute foi maior que o umero secreto!\n");
-        }
-        if (chute < numerosecreto) {
+        } else {
             printf("Seu chute foi menor que o numero secreto!\n");
         }
     }
