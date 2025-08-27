@@ -24,6 +24,8 @@ int main() {
         if (acertou) {
             printf("\nParabens! Voce acertou!\n");
             printf("Jogue de novo, voce e um bom jogador!");
+            break; // saindo do loop se o jogador acertar
+
         } else { // se o chute for diferente do número secreto
             int maior = (chute > numerosecreto);
             if (maior) {
@@ -33,5 +35,5 @@ int main() {
             }
         }
     }
-    printf("Fim de jogo!\n");
+    printf("\nFim de jogo!\n");
 }
