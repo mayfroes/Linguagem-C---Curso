@@ -12,5 +12,15 @@ int main() {
 
     printf("Qual o seu chute? "); // pedindo o chute do usuario
     scanf("%d", &chute); // lendo o chute do usuário, '&' indica o endereço da memória onde o valor será armazenado
-    printf("\nSeu chute foi %d", chute);
+    printf("\nSeu chute foi %d\n", chute);
+
+    // Definindo a lógica do jogo
+    // se o chute for igual ao número secreto
+    if (chute == numerosecreto) {
+        printf("\nParabens! Voce acertou!\n");
+        printf("Jogue de novo, voce e um bom jogador!");
+    } else { // se o chute for diferente do número secreto
+        printf("\nVoce errou!");
+    }
+    
 }
